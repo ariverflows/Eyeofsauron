@@ -3,7 +3,11 @@ import Scamera.py
 
 def main():
     print("Starting Sauron")
-return
+    Sauron = Scamera.Eye
+    Sauron.startPreview()
+    Sauron.snapPic('/home/pi')
+    Sauron.stopPreview()
+    return
 
 if __name__ == '__main__':
     main()

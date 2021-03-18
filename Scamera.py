@@ -21,4 +21,4 @@ class Eye:
 
 # filepath in the form of a .jpg
     def snapPic(self, filepath):
-        self.camera.campture(filepath)
+        self.camera.capture(filepath)
