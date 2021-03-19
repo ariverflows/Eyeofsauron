@@ -3,12 +3,12 @@ import Scamera
 
 def main():
     print("Starting Sauron")
-    SauronCapture()
+    SauronWatch()
     return
 
 def SauronCapture():
     Sauron = Scamera.Eye()
-    Sauron.startPreview(20)
+    Sauron.startPreview()
     Sauron.snapPic('/home/pi/image.jpg')
     Sauron.stopPreview()
     return
@@ -16,6 +16,8 @@ def SauronCapture():
 def SauronWatch():
     Sauron = Scamera.Eye()
     Sauron.startPreview()
+    Sauron.startRecord('/home/pi/video.h264', 10)
+    Sauron.stopRecord()
     Sauron.stopPreview()
     return
 

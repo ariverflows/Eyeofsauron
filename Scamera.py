@@ -10,8 +10,9 @@ class Eye:
         self.camera.start_preview()
 
 # filepath in the form of string 'video.h264'
-    def startRecord(self, filePath):
+    def startRecord(self, filePath, time=0):
         self.camera.start_recording(filePath)
+        sleep(time)
 
     def stopRecord(self):
         self.camera.stop_recording()
