@@ -1,11 +1,11 @@
 # this will enable Sauron to scan for frodo and Sam
-import Scamera.py
+import Scamera
 
 def main():
     print("Starting Sauron")
-    Sauron = Scamera.Eye
+    Sauron = Scamera.Eye()
     Sauron.startPreview()
-    Sauron.snapPic('/home/pi')
+    Sauron.snapPic('/home/pi/image.jpg')
     Sauron.stopPreview()
     return
 
