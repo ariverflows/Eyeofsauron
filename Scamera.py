@@ -1,4 +1,4 @@
-import picamera 
+import picamera
 from time import sleep
 
 # Basic camera fucntions to record and take picture of "my precious"
@@ -6,7 +6,7 @@ class Eye:
     def __init__(self):
         self.camera = picamera.PiCamera()
 
-    def startPreview(self):
+    def startPreview(self,time=0):
         self.camera.start_preview()
 
 # filepath in the form of string 'video.h264'
