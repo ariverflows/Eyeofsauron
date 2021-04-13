@@ -21,7 +21,7 @@ def SauronWatch():
     Sauron.stopPreview()
     return
 
-def SauronMotioDetected():
+def SauronMotionDetected():
     Sauron = Scamera.Eye()
     Sauron.MotionDetect('/home/pi/imageDetected.jpg')
     return
