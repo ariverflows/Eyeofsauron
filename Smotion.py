@@ -4,7 +4,8 @@ import os
 
 def main():
     print("Starting Sauron")
-    SauronMotionDetected()
+    #SauronMotionDetected()
+    SauronDeleteFiles()
     return
 
 def SauronWatch():
@@ -22,7 +23,7 @@ def SauronMotionDetected():
 #refactor later, removes images in bulk
 def SauronDeleteFiles():
     count = input("enter count of Images")
-    for image in range(count):
+    for image in range(int(count)):
         path = "/home/pi/imageDetected" + str(image) + ".jpg"
         os.remove(path)
 
