@@ -3,7 +3,7 @@ import Scamera
 
 def main():
     print("Starting Sauron")
-    SauronWatch()
+    SauronMotionDetected()
     return
 
 def SauronCapture():
@@ -19,6 +19,11 @@ def SauronWatch():
     Sauron.startRecord('/home/pi/video.h264', 10)
     Sauron.stopRecord()
     Sauron.stopPreview()
+    return
+
+def SauronMotioDetected():
+    Sauron = Scamera.Eye()
+    Sauron.MotionDetect('/home/pi/imageDetected.jpg')
     return
 
 if __name__ == '__main__':

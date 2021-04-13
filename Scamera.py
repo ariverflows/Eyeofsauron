@@ -1,10 +1,12 @@
 import picamera
 from time import sleep
+from gpiozero import MotionSensor
 
 # Basic camera fucntions to record and take picture of "my precious"
 class Eye:
     def __init__(self):
         self.camera = picamera.PiCamera()
+        self.sensor = MotionSensor(4)
 
     def startPreview(self,time=0):
         self.camera.start_preview()
@@ -23,3 +25,7 @@ class Eye:
 # filepath in the form of a .jpg
     def snapPic(self, filepath):
         self.camera.capture(filepath)
+
+    def MotionDetect(self, filepath):
+        self.sensor.when_motion = snapPic(filepath)
+        print("Motion Detected!")
