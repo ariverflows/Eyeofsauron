@@ -31,6 +31,6 @@ class Eye:
         while True:
             print("Sauron Watching . . . " + str(count))
             if self.sensor.motion_detected:
-                snapPic(filepath[0:-4] + str(count) + '.jpg')
+                self.snapPic(filepath[0:-4] + str(count) + '.jpg')
                 print("Motion Detected!")
                 count = count + 1
