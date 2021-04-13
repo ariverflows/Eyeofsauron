@@ -22,11 +22,11 @@ def SauronMotionDetected():
     return
 #refactor later, removes images in bulk
 def SauronDeleteFiles():
-    count = input("enter count of Images")
-    for image in range(int(count)):
+    countStart = input("enter count of Image range start: ")
+    countEnd = input("enter count of Image range end: ")
+    for image in range(int(countStart), int(countEnd) + 1):
         path = "/home/pi/imageDetected" + str(image) + ".jpg"
         os.remove(path)
-
     return
 
 if __name__ == '__main__':
