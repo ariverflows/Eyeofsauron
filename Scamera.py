@@ -27,5 +27,8 @@ class Eye:
         self.camera.capture(filepath)
 
     def MotionDetect(self, filepath):
-        self.sensor.when_motion = snapPic(filepath)
-        print("Motion Detected!")
+        while True:
+            print("Sauron Watching . . . ")
+            if self.sensor.motion_detected:
+                napPic(filepath)
+                print("Motion Detected!")
