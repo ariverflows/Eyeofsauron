@@ -1,16 +1,10 @@
 # this will enable Sauron to scan for frodo and Sam
 import Scamera
+import os
 
 def main():
     print("Starting Sauron")
     SauronMotionDetected()
-    return
-
-def SauronCapture():
-    Sauron = Scamera.Eye()
-    Sauron.startPreview()
-    Sauron.snapPic('/home/pi/image.jpg')
-    Sauron.stopPreview()
     return
 
 def SauronWatch():
@@ -24,6 +18,14 @@ def SauronWatch():
 def SauronMotionDetected():
     Sauron = Scamera.Eye()
     Sauron.MotionDetect('/home/pi/imageDetected.jpg')
+    return
+#refactor later, removes images in bulk
+def SauronDeleteFiles():
+    count = input("enter count of Images")
+    for image in range(count):
+        path = "/home/pi/imageDetected" + str(image) + ".jpg"
+        os.remove(path)
+
     return
 
 if __name__ == '__main__':

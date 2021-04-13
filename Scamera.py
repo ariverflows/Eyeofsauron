@@ -34,3 +34,4 @@ class Eye:
                 self.snapPic(filepath[0:-4] + str(count) + '.jpg')
                 print("Motion Detected!")
                 count = count + 1
+                sleep(2)
